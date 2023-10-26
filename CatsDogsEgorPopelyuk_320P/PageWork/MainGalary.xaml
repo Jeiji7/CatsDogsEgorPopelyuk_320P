@@ -56,6 +56,8 @@
         <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
             <TextBlock FontSize="20" Margin="10 10" TextWrapping="Wrap">Поиск описания фоточки</TextBlock>
             <TextBox Height="18" x:Name="SearchTBox" TextChanged="SearchTBox_TextChanged"></TextBox>
+            <TextBlock FontSize="20" Margin="10 10">Пользователь</TextBlock>
+            <ComboBox x:Name="UsersCB" DisplayMemberPath="Name" SelectionChanged="UsersCB_SelectionChanged"></ComboBox>
         </StackPanel>
     </Grid>
 </Page>

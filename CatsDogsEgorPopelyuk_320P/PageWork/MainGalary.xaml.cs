@@ -27,6 +27,9 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
             InitializeComponent();
             PhotoGalaryList.ItemsSource = App.BD.Animal.ToList();
 
+            var user = App.BD.Users.ToList();
+            UsersCB.ItemsSource = user.ToList();
+            UsersCB.DisplayMemberPath = "Name";
         }
 
         private void SearchTBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -34,9 +37,17 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
             PhotoGalaryList.ItemsSource = new List<Animal>(App.BD.Animal.Where(i => i.Exposition.StartsWith(SearchTBox.Text)));
         }
 
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void UsersCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var animal = UsersCB.SelectedItem as Users;
+            PhotoGalaryList.ItemsSource = new List<Animal>(App.BD.Animal.Where(i => i.ID_animal_type == animal.ID_users));
+            
         }
     }
 }
