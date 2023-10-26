@@ -59,5 +59,10 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
                 MessageBox.Show("А ну ка всё заполнил `_`");
             }   
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageWork.MainGalary());
+        }
     }
 }

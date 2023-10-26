@@ -30,5 +30,10 @@
             <ComboBox Width="120" x:Name="TypeAnimalCB" Margin="10 10" DisplayMemberPath="Name_animal"></ComboBox>
             <Button x:Name="AddDataBT" FontSize="16" Click="AddDataBT_Click">Добавить</Button>
         </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Button Click="Button_Click_1">
+                Продолжить
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>

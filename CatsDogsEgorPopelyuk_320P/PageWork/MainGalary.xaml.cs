@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CatsDogsEgorPopelyuk_320P.DataBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,14 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
         public MainGalary()
         {
             InitializeComponent();
+            PhotoGalaryList.ItemsSource = App.BD.Animal.ToList();
+
+
         }
 
         private void SearchTBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            PhotoGalaryList.ItemsSource = new List<Animal>(App.BD.Animal.Where(i => i.Exposition.StartsWith(SearchTBox.Text)));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
