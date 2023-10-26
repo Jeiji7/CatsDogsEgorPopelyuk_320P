@@ -21,11 +21,11 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
     /// </summary>
     public partial class MainGalary : Page
     {
+
         public MainGalary()
         {
             InitializeComponent();
             PhotoGalaryList.ItemsSource = App.BD.Animal.ToList();
-
 
         }
 
