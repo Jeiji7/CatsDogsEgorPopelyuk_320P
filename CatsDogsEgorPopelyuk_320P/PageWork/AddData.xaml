@@ -23,10 +23,11 @@
             <Image x:Name="AddImage"></Image>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" Height="48" Width="657">
+        <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
             <TextBox x:Name="Expositions" Width="300" Margin="10"></TextBox>
             <TextBlock FontSize="20" Margin="0 10">Выбрать питомца:</TextBlock>
             <ComboBox Width="150" x:Name="TypeAnimalCB" Margin="10 10"></ComboBox>
+            <Button x:Name="AddDataBT" FontSize="16" Click="AddDataBT_Click">Добавить данные</Button>
         </StackPanel>
     </Grid>
 </Page>

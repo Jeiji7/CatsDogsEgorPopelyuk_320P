@@ -24,5 +24,17 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
         {
             InitializeComponent();
         }
+
+        private void AddDataBT_Click(object sender, RoutedEventArgs e)
+        {
+            try 
+            {
+
+            }
+            catch 
+            {
+                MessageBox.Show("А ну ка всё заполнил `_`");
+            }   
+        }
     }
 }
