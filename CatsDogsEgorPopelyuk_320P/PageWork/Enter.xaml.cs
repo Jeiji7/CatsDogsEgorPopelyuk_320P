@@ -23,11 +23,15 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
         public Enter()
         {
             InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var login = LoginTB.Text.Trim();
+            var password = PasswordPB.Password.Trim();
 
+            NavigationService.Navigate(new PageWork.AddData());
         }
     }
 }
