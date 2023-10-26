@@ -24,5 +24,10 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

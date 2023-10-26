@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CatsDogsEgorPopelyuk_320P.DataBase;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace CatsDogsEgorPopelyuk_320P
     /// </summary>
     public partial class App : Application
     {
+        public static CatsDogsBaseEntities BD = new CatsDogsBaseEntities();
     }
 }
