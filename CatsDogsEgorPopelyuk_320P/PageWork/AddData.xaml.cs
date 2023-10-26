@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CatsDogsEgorPopelyuk_320P
+namespace CatsDogsEgorPopelyuk_320P.PageWork
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddData.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddData : Page
     {
-        public MainWindow()
+        public AddData()
         {
             InitializeComponent();
-            MainFrame.NavigationService.Navigate(new PageWork.Enter());
         }
     }
 }
