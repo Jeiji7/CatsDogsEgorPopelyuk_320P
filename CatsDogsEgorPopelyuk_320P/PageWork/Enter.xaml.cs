@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CatsDogsEgorPopelyuk_320P.DataBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace CatsDogsEgorPopelyuk_320P.PageWork
 {
@@ -20,18 +22,22 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
     /// </summary>
     public partial class Enter : Page
     {
+        public static List<Users> Users { get; set; }
         public Enter()
         {
             InitializeComponent();
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var login = LoginTB.Text.Trim();
-            var password = PasswordPB.Password.Trim();
-
-            NavigationService.Navigate(new PageWork.AddData());
+            string login = LoginTB.Text.Trim();
+            string password = PasswordPB.Password.Trim();
+            Users = new List<Users>(App.BD.Users.ToList());
+            Users currentUser = Users.FirstOrDefault(x => x.Name == login && x.Password == password);
+            if (currentUser != null)
+                NavigationService.Navigate(new PageWork.AddData());
+            else
+                MessageBox.Show("Данные не верны");
         }
     }
 }

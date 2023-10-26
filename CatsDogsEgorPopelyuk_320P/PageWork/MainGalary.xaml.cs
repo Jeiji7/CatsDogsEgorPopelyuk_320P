@@ -24,5 +24,15 @@ namespace CatsDogsEgorPopelyuk_320P.PageWork
         {
             InitializeComponent();
         }
+
+        private void SearchTBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

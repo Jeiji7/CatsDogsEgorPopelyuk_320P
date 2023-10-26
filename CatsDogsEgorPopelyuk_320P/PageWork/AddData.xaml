@@ -24,10 +24,11 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBox x:Name="Expositions" Width="300" Margin="10"></TextBox>
-            <TextBlock FontSize="20" Margin="0 10">Выбрать питомца:</TextBlock>
-            <ComboBox Width="150" x:Name="TypeAnimalCB" Margin="10 10"></ComboBox>
-            <Button x:Name="AddDataBT" FontSize="16" Click="AddDataBT_Click">Добавить данные</Button>
+            <TextBlock FontSize="18" Margin="5 10">Описание фотки:</TextBlock>
+            <TextBox x:Name="ExpositionsTB" Width="240" Margin="10"></TextBox>
+            <TextBlock FontSize="18" Margin="0 10">Выбрать питомца:</TextBlock>
+            <ComboBox Width="120" x:Name="TypeAnimalCB" Margin="10 10" DisplayMemberPath="Name_animal"></ComboBox>
+            <Button x:Name="AddDataBT" FontSize="16" Click="AddDataBT_Click">Добавить</Button>
         </StackPanel>
     </Grid>
 </Page>
